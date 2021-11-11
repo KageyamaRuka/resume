@@ -15,7 +15,7 @@ else
 endif
 
 clean:
-	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf *.cut *.fdb_latexmk *.fls *.tex
+	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf *.cut *.fdb_latexmk *.fls
 
 clean-tex:
 	$(RM) resume.tex resume-cn.tex resume-elab.tex
