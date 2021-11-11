@@ -6,48 +6,49 @@ import TeX
 basicInfo :: Resume
 basicInfo = paragraph
   [ pure "\\basicInfo{"
-  , pure $ "\\email{ice1000kotlin@foxmail.com}" ++ period
-  -- , cn $ "\\phone{(+86) 180-8192-5082}" ++ period
-  -- , en $ "\\phone{(1) 717-728-6526}" ++ period
-  , pure $ "\\github[ice1000]{https://github.com/ice1000}" ++ period
-  , pure $ "\\homepage[ice1000.org]{https://ice1000.org}" ++ period
-  , pure "\\linkedin[ice1000]{https://www.linkedin.com/in/ice1000}"
+  , pure $ "\\email{kageyama.ruka@gmail.com}" ++ period
+  -- , cn $ "\\phone{(+86) 186-7676-4936}" ++ period
+  -- , en $ "\\phone{(1) 608-501-1044}" ++ period
+  , pure $ "\\github[KageyamaRuka]{https://github.com/KageyamaRuka}" ++ period
+  -- , pure $ "\\homepage[KageyamaRuka]{KageyamaRuka.github.io}" ++ period
+  , pure "\\linkedin[Wayne Deng]{https://www.linkedin.com/in/wayne-deng-82549499/}"
   , pure "}"
   ] where period = "\\textperiodcentered\\"
 
 education :: Resume
 education = section "教育经历" "Education"
-  [ datedSection (date "2018" "08" ~~ present) $ paragraph
-    [ en "\\textbf{The Pennsylvania State University}, PA, US"
-    , cn "\\textbf{宾夕法尼亚州州立大学}, 美国"
+  [ datedSection (date "2008" "09" ~~ date "2012" "07") $ paragraph
+    [ en "\\textbf{Wuhan University of Technology}, Hubei, CN"
+    , cn "\\textbf{武汉理工大学}, 中国"
     ]
-  , en $ "Major: Computer Science (Undergraduate), Anticipated Date of Graduation:"
-  , cn $ "专业：计算机科学（本科），预计毕业日期："
-  , graduation
-  , pure gpa
-  ] where
-    graduation = date "2023" "01"
-    gpa = "GPA 3.23/4.00"
+  , en $ "Major: Electronic Information Engineering (Bachelor)"
+  , cn $ "专业：电子信息工程（本科）"
+  -- , graduation
+  -- , pure gpa
+  ] 
+  -- where
+  --   graduation = date "2023" "01"
+  --   gpa = "GPA 3.23/4.00"
 
-sourcebrella :: Resume
-sourcebrella = paragraph
-  [ datedSection (date "2018" "02" ~~ date "2018" "07") $ paragraph
-    [ cn "\\textbf{深圳市前海源伞科技有限公司（现蚂蚁金服研发效能团队）}, 深圳, 中国"
-    , en "\\textbf{Sourcebrella Inc. (now Ant Financial Code Insight)}, Shenzhen, China"
+cienet :: Resume
+cienet = paragraph
+  [ datedSection (date "2016" "11" ~~ date "2018" "03") $ paragraph
+    [ cn "\\textbf{瞬联软件科技有限公司(爱立信外包)}, 深圳, 中国"
+    , en "\\textbf{CIeNET Technologies(Outsourcing to Ericsson)}, Shenzhen, China"
     ]
   , paragraph
-    [ cn "\\role{静态分析}{编译器前端，IDE 插件开发实习}"
-    , en "\\role{Static Analysis}{Developer Intern}"
+    [ cn "\\role{持续集成}{软件工程师}"
+    , en "\\role{Continuous integration}{Software Engineer}"
     ]
   , noSimple $ itemize
-    [ cn "\\item 负责 pinpoint 分析器的 IntelliJ/CLion/Eclipse 工具集成，协助开发 SonarQube 插件。"
-    , en "\\item Created IntelliJ/CLion/Eclipse plugin for the Pinpoint analyzer. Co-worked on the SonarQube plugin."
+    [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发面向 WMG/SEG 云网关的自动化测试框架"
+    , en "\\item Responsible for CI project development on Jenkins . Co-worked on the Automation Test Framework."
 
-    , cn "\\item 编写了一个多线程的跨 Java/Kotlin 的源代码索引工具，索引 Hadoop 仅需 4 分钟。"
-    , en "\\item Created a multi-threading cross Java/Kotlin source code indexer which can index Hadoop within 4 minutes."
+    , cn "\\item 编写了一个基于Fabric/Paramiko的多线程远程部署工具，支持同步部署数十台自动化测试环境"
+    , en "\\item Created a multi-threading remote builder, supporting dozens of auto-test environment parallel building"
 
-    , cn "\\item 学到了很多 Linux 编程和 Clang/LLVM 源码相关的知识。"
-    , en "\\item Learned a lot about Linux programming and the Clang/LLVM codebase."
+    , cn "\\item 合作编写了一个分布式测试框架，将全回归测试 3000+ 条用例完成时间由 12 小时缩短至仅需 2 小时"
+    , en "\\item Co-worked on the Distributed Test Framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to 2 hours"
     ]
   ]
 
@@ -377,7 +378,7 @@ resume = paragraph
   , cn "\\renewcommand\\headrulewidth{0pt}"
 
   -- dare?
-  , tex "name" "张寅森" "Tesla Zhang"
+  , tex "name" "邓伟楠" "Wayne Deng"
 
   , basicInfo
   , education
@@ -386,7 +387,7 @@ resume = paragraph
     [ jetbrains
     , plct
     , pingcap
-    , sourcebrella
+    , cienet
     ]
 
   , section "个人项目" "Personal Projects"
