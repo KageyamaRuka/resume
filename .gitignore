@@ -25,3 +25,4 @@ dist-*/
 ## Emacs/Vim ##
 
 *~
+*.DS_Store
