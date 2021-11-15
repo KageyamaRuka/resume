@@ -52,7 +52,7 @@ cienet =
         ],
       noSimple $
         itemize
-          [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发面向 WMG/SEG 云网关的自动化测试框架",
+          [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发面向 WMG 云网关的自动化测试框架",
             en "\\item Responsible for CI project development on Jenkins . Co-worked on the Automation Test Framework.",
             cn $ "\\item 编写了一个基于" ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同步部署数十台自动化测试环境",
             en "\\item Created a multi-threading remote builder, supporting dozens of auto-test environment parallel building",
