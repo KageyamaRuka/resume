@@ -28,15 +28,9 @@ education =
           [ en "\\textbf{Wuhan University of Technology}, Hubei, CN",
             cn "\\textbf{武汉理工大学}, 中国"
           ],
-      en $ "Major: Electronic Information Engineering (Bachelor)",
-      cn $ "专业：电子信息工程（本科）"
-      -- , graduation
-      -- , pure gpa
+      en "Major: Electronic Information Engineering (Bachelor)",
+      cn "专业：电子信息工程（本科）"
     ]
-
--- where
---   graduation = date "2023" "01"
---   gpa = "GPA 3.23/4.00"
 
 cienet :: Resume
 cienet =
@@ -67,7 +61,7 @@ cienet =
 pingan :: Resume
 pingan =
   paragraph
-    [ datedSection (date "2018" "08" ~~ date "2019" "01") $
+    [ datedSection (date "2018" "09" ~~ date "2019" "01") $
         paragraph
           [ cn "\\textbf{平安科技（深圳）有限公司}, 全职",
             en "\\textbf{Ping An Technology}, Fulltime"
@@ -78,35 +72,22 @@ pingan =
         ],
       itemize
         [ cn $
-            "\\item 改进各种 TiKV 的外部依赖库，如优化 " ++ grpcio
-              ++ " 的内存性能，增加 "
-              ++ procinfo
-              ++ " 的功能。",
+            "\\item 负责平安云门户的后端接口测试代码开发以及自动化工具开发。",
           en $
-            "\\item Improved many TiKV-relevant libraries, "
-              ++ "like optimizing the performance of "
-              ++ grpcio
-              ++ ", adding new features to "
-              ++ procinfo
+            "\\item Responsible for PingAn Cloud Portal's backend api test code development and automation test toolkit development"
               ++ ".",
-          cn $ "\\item 协助迁移 TiKV 及其 Raft 实现所使用的 " ++ protobuf ++ " 库。",
-          elab $ "\\item Helped to migrate the " ++ protobuf ++ " library used by TiKV and its Raft implementation.",
-          cn "\\item 学到了很多 Rust 编程、分布式系统、远程工作和数据库相关的知识。",
-          elab "\\item Learned a lot about Rust programming, distributed system, working remotely, and databases."
+          cn $ "\\item 。",
+          elab $ "\\item Helped to migrate the " ++ protobuf ++ " library used by TiKV and its Raft implementation."
         ]
     ]
-  where
-    grpcio = "\\href{https://docs.rs/crate/grpcio} {grpcio}"
-    procinfo = "\\href{https://docs.rs/crate/procinfo} {procinfo}"
-    protobuf = "Protocol-Buffer"
 
-jetbrains :: Resume
-jetbrains =
+transsnet :: Resume
+transsnet =
   paragraph
-    [ datedSection (date "2020" "01" ~~ date "2020" "12") $
+    [ datedSection (date "2019" "01" ~~ date "2019" "08") $
         paragraph
-          [ cn "\\textbf{JetBrains Research}, 远程",
-            en "\\textbf{JetBrains Research}, Remote"
+          [ cn "\\textbf{传易金服}, 全职",
+            en "\\textbf{Transsnet Financial}, Fulltime"
           ],
       paragraph
         [ cn "\\role{同伦类型论与依值类型}{定理证明器 Arend 开发实习}",
@@ -343,7 +324,8 @@ ideDev =
     julia = pref ++ "10413} {Julia}"
     dtlc = pref ++ "12176} {DTLC}"
     pest = pref ++ "12046} {Pest}"
-    pref = "\\href{https://plugins.jetbrains.com/plugin/"
+    pref = "\\href{https://plugins.transsnet
+  .com/plugin/"
 
 kotlinJava :: Resume
 kotlinJava =
@@ -435,7 +417,8 @@ resume =
       section
         "工作经历"
         "Work Experience"
-        [ jetbrains,
+        [ transsnet
+      ,
           plct,
           pingan,
           cienet
@@ -457,7 +440,8 @@ resume =
       section
         "其他"
         "Miscellaneous"
-        [ let intellij = "https://plugins.jetbrains.com/author/10a216dd-c558-4aaf-aa8a-723f431452fb"
+        [ let intellij = "https://plugins.transsnet
+      .com/author/10a216dd-c558-4aaf-aa8a-723f431452fb"
               osc = url "https://ice1000.org/opensource-contributions"
               bintray = "https://bintray.com/ice1000"
               crates = "https://crates.io/users/ice1000"
