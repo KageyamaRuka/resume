@@ -41,22 +41,22 @@ cienet =
             en "\\textbf{CIeNET Technologies(Outsourcing to Ericsson)}, Shenzhen, China"
           ],
       paragraph
-        [ cn "\\role{持续集成}{软件工程师}",
-          en "\\role{Continuous integration}{Software Engineer}"
+        [ cn "\\role{持续集成组}{软件工程师}",
+          en "\\role{Continuous integration Team}{Software Engineer}"
         ],
       noSimple $
         itemize
-          [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发面向 WMG 云网关的自动化测试框架",
-            en "\\item Responsible for CI project development on Jenkins . Co-worked on the Automation Test Framework.",
-            cn $ "\\item 编写了一个基于" ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同步部署数十台自动化测试环境",
-            en "\\item Created a multi-threading remote builder, supporting dozens of auto-test environment parallel building",
-            cn "\\item 合作编写了一个分布式测试框架，将全回归测试 3000+ 条用例完成时间由 12 小时缩短至仅需 2 小时",
+          [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发面向 WMG 云网关的自动化测试框架。",
+            en "\\item Responsible for CI project development on Jenkins. Co-worked on the automation test framework for WMG Cloud Gateway.",
+            cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同步部署数十台自动化测试环境",
+            en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", supporting dozens of automation test environment parallel building",
+            cn "\\item 合作编写了一个分布式测试框架，将全回归测试的 3000+ 条用例完成时间由 12 小时缩短至仅需 2 小时",
             en "\\item Co-worked on the Distributed Test Framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to 2 hours"
           ]
     ]
   where
     fabric = "\\href{https://www.fabfile.org/} {fabric}"
-    paramiko = "\\href{https://www.paramiko.org//} {paramiko}"
+    paramiko = "\\href{https://www.paramiko.org/} {paramiko}"
 
 pingan :: Resume
 pingan =
@@ -68,51 +68,66 @@ pingan =
           ],
       paragraph
         [ cn "\\role{平安云门户}{测试开发工程师 - 自动化小组}",
-          en "\\role{Ping An Cloud Portal}{Software Development Engineer in Test - Automation Team}"
+          en "\\role{PingAn Cloud Portal}{Software Development Engineer in Test - Automation Team}"
         ],
       itemize
-        [ cn $
-            "\\item 负责平安云门户的后端接口测试代码开发以及自动化工具开发。",
-          en $
-            "\\item Responsible for PingAn Cloud Portal's backend api test code development and automation test toolkit development"
-              ++ ".",
-          cn $ "\\item 。",
-          elab $ "\\item Helped to migrate the " ++ protobuf ++ " library used by TiKV and its Raft implementation."
+        [ cn "\\item 负责平安云门户的后端接口测试代码开发以及自动化工具开发。",
+          en "\\item Responsible for PingAn Cloud Portal's backend api test code development and automation test toolkit development.",
+          cn $ "\\item 编写了基于 " ++ paramiko ++ "/" ++ flask ++ "的指令转发路由服务，以支持云平台模版部署VM服务的测试验证。",
+          elab $ "\\item Created a command route service based on " ++ paramiko ++ " and " ++ flask ++ " to support test scenario verification of template VM building on PingAn Cloud."
         ]
     ]
+  where
+    flask = "\\href{https://flask.palletsprojects.com/} {flask}"
+    paramiko = "\\href{https://www.paramiko.org/} {paramiko}"
 
 transsnet :: Resume
 transsnet =
   paragraph
     [ datedSection (date "2019" "01" ~~ date "2019" "08") $
         paragraph
-          [ cn "\\textbf{传易金服}, 全职",
-            en "\\textbf{Transsnet Financial}, Fulltime"
+          [ cn "\\textbf{传易互联}, 全职",
+            en "\\textbf{Transsnet}, Fulltime"
           ],
       paragraph
-        [ cn "\\role{同伦类型论与依值类型}{定理证明器 Arend 开发实习}",
-          en "\\role{HoTT and Dependent Types}{Arend Team Intern}"
+        [ cn "\\role{传易金服}{测试开发工程师}",
+          en "\\role{Transsnet Financial}{Software Development Engineer in Test}"
         ],
       itemize
-        [ cn $ "\\item 使用 gradle composite build 和 buildSrc 等复杂的构建功能改善编译速度、提高构建自动化程度。",
-          elab $ "\\item Used features like gradle composite build and buildSrc to reduce build time and improve automation.",
-          cn $ "\\item 实现了一些语言特性和 IDE 插件功能，如 section 语法、卫生宏、优化的 \\texttt{Fin} 类型、语义高亮等。",
-          en $ "\\item Improved the language/IDE, such as sections, hygiene macros, optimized \\texttt{Fin} type, semantic highlighting, etc.",
-          cn $ "\\item 开发了一个可扩展的 REPL 框架，并提供命令行实现（可基于上下文补全）、IntelliJ IDEA 实现（可与打开的项目进行交互，支持补全、高亮和跳转）。",
-          elab $ "\\item Created an extensible REPL framework, provided implementations in CLI (with contextual completion) and in IntelliJ IDEA (interacts with the opened project, supports completion, highlighting and goto definition).",
-          cn $ "\\item 设计并实现了一个表达式类型检查的调试器，支持显示局部变量和表达式栈帧，同时支持单步调试。",
-          elab $ "\\item Designed and implemented an expression type-checking debugger that supports step-into and displays local context and expressions as stack frames.",
-          simple $ "\\item Created a debugger for inspecting bidirectional type-checking and REPL in both CLI and IDE."
+        [ cn $ "\\item 实现了一个基于 " ++ requests ++ " 的风控规则字段自动化验证工具, 涵盖征信报告解析以及征信数据构造与注入",
+          elab $ "\\item Created a toolkit for risk-control rules automation test and verification based on " ++ requests ++ " including credit report analyzation and credit data creation and injection."
+        ]
+    ]
+  where
+    requests = "\\href{https://docs.python-requests.org} {requests}"
+
+insta360 :: Resume
+insta360 =
+  paragraph
+    [ datedSection (date "2019" "12" ~~ date "2021" "03") $
+        paragraph
+          [ cn "\\textbf{影石创新科技有限公司}, 全职",
+            en "\\textbf{insta360}, Fulltime"
+          ],
+      paragraph
+        [ cn "\\role{应用软件部测试组}{测试开发工程师与自动化负责人}",
+          en "\\role{Application Software Group, QA Team}{Software Development Engineer in Test and Automation Team Lead}"
+        ],
+      itemize
+        [ cn $ "\\item 带领类型小队探索现代化的依值类型实现策略，包括但不限于基于模式的合一化、模式匹配的类型检查、递归函数停机性检查等。",
+          en $
+            "\\item Leading the types team to explore modern techniques in dependent type implementation, such as "
+              ++ "pattern unification of implicit variables, type checking of pattern matching, termination check of recursive definitions, etc."
         ]
     ]
 
-plct :: Resume
-plct =
+michaels :: Resume
+michaels =
   paragraph
-    [ datedSection (date "2020" "12" ~~ present) $
+    [ datedSection (date "2021" "03" ~~ present) $
         paragraph
-          [ cn "\\textbf{PLCT 实验室}, 远程",
-            en "\\textbf{PLCT Lab}, Remote"
+          [ cn "\\textbf{Michaels Stores, Inc.}, 全职",
+            en "\\textbf{Michaels Stores, Inc.}, Fulltime"
           ],
       paragraph
         [ cn "\\role{依值类型系统实现}{类型小队队长}",
@@ -324,8 +339,7 @@ ideDev =
     julia = pref ++ "10413} {Julia}"
     dtlc = pref ++ "12176} {DTLC}"
     pest = pref ++ "12046} {Pest}"
-    pref = "\\href{https://plugins.transsnet
-  .com/plugin/"
+    pref = "\\href{https://plugins.transsnet.com/plugin/"
 
 kotlinJava :: Resume
 kotlinJava =
@@ -417,9 +431,9 @@ resume =
       section
         "工作经历"
         "Work Experience"
-        [ transsnet
-      ,
-          plct,
+        [ michaels,
+          insta360,
+          transsnet,
           pingan,
           cienet
         ],
@@ -440,8 +454,7 @@ resume =
       section
         "其他"
         "Miscellaneous"
-        [ let intellij = "https://plugins.transsnet
-      .com/author/10a216dd-c558-4aaf-aa8a-723f431452fb"
+        [ let intellij = "https://plugins.transsnet.com/author/10a216dd-c558-4aaf-aa8a-723f431452fb"
               osc = url "https://ice1000.org/opensource-contributions"
               bintray = "https://bintray.com/ice1000"
               crates = "https://crates.io/users/ice1000"
