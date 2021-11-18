@@ -37,8 +37,8 @@ cienet =
   paragraph
     [ datedSection (date "2016" "11" ~~ date "2018" "03") $
         paragraph
-          [ cn "\\textbf{瞬联软件科技有限公司(爱立信外包)}, 深圳, 中国",
-            en "\\textbf{CIeNET Technologies(Outsourcing to Ericsson)}, Shenzhen, China"
+          [ cn "\\textbf{瞬联软件科技有限公司}, 爱立信外包",
+            en "\\textbf{CIeNET Technologies}, Outsourcing to Ericsson"
           ],
       paragraph
         [ cn "\\role{持续集成组}{软件工程师}",
@@ -48,9 +48,9 @@ cienet =
         itemize
           [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发面向 WMG 云网关的自动化测试框架。",
             en "\\item Responsible for CI project development on Jenkins. Co-worked on the automation test framework for WMG Cloud Gateway.",
-            cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同步部署数十台自动化测试环境",
+            cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同步部署数十台自动化测试环境。",
             en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", supporting dozens of automation test environment parallel building",
-            cn "\\item 合作编写了一个分布式测试框架，将全回归测试的 3000+ 条用例完成时间由 12 小时缩短至仅需 2 小时",
+            cn "\\item 合作编写了一个分布式测试框架，将全回归测试的 3000+ 条用例完成时间由 12 小时缩短至仅需 2 小时。",
             en "\\item Co-worked on the Distributed Test Framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to 2 hours"
           ]
     ]
@@ -64,17 +64,17 @@ pingan =
     [ datedSection (date "2018" "09" ~~ date "2019" "01") $
         paragraph
           [ cn "\\textbf{平安科技（深圳）有限公司}, 全职",
-            en "\\textbf{Ping An Technology}, Fulltime"
+            en "\\textbf{PingAn Technology}, Fulltime"
           ],
       paragraph
-        [ cn "\\role{平安云门户}{测试开发工程师 - 自动化小组}",
-          en "\\role{PingAn Cloud Portal}{Software Development Engineer in Test - Automation Team}"
+        [ cn "\\role{平安云门户}{测试开发工程师}",
+          en "\\role{PingAn Cloud Portal}{Software Development Engineer in Test}"
         ],
       itemize
         [ cn "\\item 负责平安云门户的后端接口测试代码开发以及自动化工具开发。",
           en "\\item Responsible for PingAn Cloud Portal's backend api test code development and automation test toolkit development.",
-          cn $ "\\item 编写了基于 " ++ paramiko ++ "/" ++ flask ++ "的指令转发路由服务，以支持云平台模版部署VM服务的测试验证。",
-          elab $ "\\item Created a command route service based on " ++ paramiko ++ " and " ++ flask ++ " to support test scenario verification of template VM building on PingAn Cloud."
+          cn $ "\\item 编写了一个基于 " ++ paramiko ++ "/" ++ flask ++ "的指令转发路由服务，以支持云平台模版部署VM功能的测试验证。",
+          elab $ "\\item Created a command route service based on " ++ paramiko ++ " and " ++ flask ++ " to test template VM building on PingAn Cloud."
         ]
     ]
   where
@@ -86,7 +86,7 @@ transsnet =
   paragraph
     [ datedSection (date "2019" "01" ~~ date "2019" "08") $
         paragraph
-          [ cn "\\textbf{传易互联}, 全职",
+          [ cn "\\textbf{传易互联（深圳）有限公司}, 全职",
             en "\\textbf{Transsnet}, Fulltime"
           ],
       paragraph
@@ -94,12 +94,16 @@ transsnet =
           en "\\role{Transsnet Financial}{Software Development Engineer in Test}"
         ],
       itemize
-        [ cn $ "\\item 实现了一个基于 " ++ requests ++ " 的风控规则字段自动化验证工具, 涵盖征信报告解析以及征信数据构造与注入",
-          elab $ "\\item Created a toolkit for risk-control rules automation test and verification based on " ++ requests ++ " including credit report analyzation and credit data creation and injection."
+        [ cn $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段自动化验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
+          en $ "\\item Created a tool for risk-control rules automation test and verification based on " ++ requests ++ " including credit report analyzation and credit data creation and injection.",
+          cn $ "\\item 编写了一个基于 " ++ jmeter ++ " 的性能测试工具, 能根据测试结果的吞吐量自动伸缩并发线程数, 同时根据响应延时以及请求错误率自动调度测试执行。",
+          en $ "\\item Created a performance test tool based on " ++ jmeter ++ " , which can auto scale threads on client by the throughput of test result, and trigger execution based on the response delay and fail rate"
         ]
     ]
   where
     requests = "\\href{https://docs.python-requests.org} {requests}"
+    boto3 = "\\href{https://boto3.readthedocs.io} {boto3}"
+    jmeter = "\\href{https://jmeter.apache.org} {jmeter}"
 
 insta360 :: Resume
 insta360 =
@@ -114,17 +118,28 @@ insta360 =
           en "\\role{Application Software Group, QA Team}{Software Development Engineer in Test and Automation Team Lead}"
         ],
       itemize
-        [ cn $ "\\item 带领类型小队探索现代化的依值类型实现策略，包括但不限于基于模式的合一化、模式匹配的类型检查、递归函数停机性检查等。",
-          en $
-            "\\item Leading the types team to explore modern techniques in dependent type implementation, such as "
-              ++ "pattern unification of implicit variables, type checking of pattern matching, termination check of recursive definitions, etc."
+        [
+          cn "\\item 负责测试框架的设计与开发, 以及测试组的自动化建设。",
+          en "\\item Responsible for test framework design and develop.",
+          cn "\\item 编写了一个通用测试框架GAT, 涵盖了 UI/RPC/Stability 等场景的自动化测试需求。",
+          en "\\item .",
+          cn $ "\\item 在GAT的基础上, 编写了一个基于 " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " 的 UI 测试拓展模块, 以支持 iOS/Android 平台相机 App 的 UI 自动化测试, 以及 Windows 平台的桌面后期处理软件 Insta360 Studio 的 UI 自动化测试。",
+          en "\\item .",
+          cn $ "\\item 在GAT的基础上, 编写了一个基于 " ++ protobuf ++ " 的 RPC 接口测试拓展模块, 以支持通过Wifi或USB远程控制相机。",
+          en "\\item ."
         ]
     ]
+  where
+    appium = "\\href{https://appium.io/} {appium}"
+    uiautomator2 = "\\href{https://appium.io/docs/en/drivers/android-uiautomator2/} {UiAutomator2}"
+    xcuitest = "\\href{https://appium.io/docs/en/drivers/ios-xcuitest-real-devices/} {XCUITest}"
+    winappdriver = "\\href{https://github.com/Microsoft/WinAppDriver} {WinAppDriver}"
+    protobuf = "\\href{https://developers.google.com/protocol-buffers/} {protobuf}"
 
 michaels :: Resume
 michaels =
   paragraph
-    [ datedSection (date "2021" "03" ~~ present) $
+    [ datedSection (date "2021" "04" ~~ present) $
         paragraph
           [ cn "\\textbf{Michaels Stores, Inc.}, 全职",
             en "\\textbf{Michaels Stores, Inc.}, Fulltime"
@@ -271,134 +286,34 @@ devTools :: Resume
 devTools =
   paragraph
     [ itemTeX "开发工具" "Development Tool",
-      cn "能适应任何编辑器/操作系统，平常在 Ubuntu 下使用 JetBrains IDE、Emacs，",
+      cn "能适应大部分编辑器/操作系统，平常在 MacOS/Arch Linux 下使用 JetBrains IDE、Vscode，",
       cn $ "有使用 " ++ intercalate "、" tools ++ " 等团队协作工具的经验。",
-      en "can adapt to any editors/OSs, usually use JetBrains IDEs and Emacs under",
-      simple "Ubuntu.",
-      elab "Ubuntu, have experience with team collaboration tools like ",
+      en "can adapt to mostly editors/OSs, usually use JetBrains IDEs and Vscode under",
+      simple "MacOS/Arch Linux.",
+      elab "MacOS/Arch Linux, have experience with team collaboration tools like ",
       elab $ intercalate ", " tools ++ "."
     ]
   where
-    tools = ["YouTrack", "Jira", "GitHub", "BitBucket", "Coding.net", "Tower", "Slack", "JetBrains Space"]
-
-compiler :: Resume
-compiler =
-  paragraph
-    [ itemTeX "编译器" "Compiler",
-      cn $ "理解多种程序表示，例如 " ++ repre ++ " 等。",
-      cn "熟悉大部分 parser 生成器，理解基于布局的语法解析。",
-      en $ "understand various program representations such as " ++ repre ++ ", etc.",
-      elab "Familiar with most parser generators, understand layout syntax parsing."
-    ]
-  where
-    repre = "CFG, ANF, (P)HOAS"
+    tools = ["Jira", "BitBucket", "GitLab", "GitHub", "Slack"]
 
 programmingLanguages :: Resume
 programmingLanguages =
   paragraph
     [ itemTeX "编程语言" "Program Language",
-      cn "\\textbf{泛语言}（编程不受特定语言限制），",
-      cn $ "且尤其熟悉 " ++ very ++ "，",
-      cn $ "较为熟悉 " ++ somehow ++ " (排名均不分先后)。",
-      en "\\textbf{multilingual} (not limited to any specific language),",
-      en $ "especially experienced in " ++ very ++ ",",
-      en $ "comfortable with " ++ somehow ++ " (in random order)."
+      cn $ "熟悉 " ++ familiar ++ "，",
+      cn $ "较为熟悉 " ++ somehow ++ "。",
+      en $ "experienced in " ++ familiar ++ ",",
+      en $ "comfortable with " ++ somehow ++ "."
     ]
   where
-    somehow = "Dart C C++ F\\# F$\\star$ Idris Perl"
-    very = "Java Kotlin Rust C\\# Agda Haskell Arend"
-
-ideDev :: Resume
-ideDev =
-  paragraph
-    [ itemTeX "IDE 工具开发" "IDE Tooling",
-      cn "\\textbf{3 年}开发经验，",
-      en "\\textbf{3 years} of experience,",
-      cn $
-        "熟悉 IntelliJ 平台的基础设施（开发了"
-          ++ " "
-          ++ julia
-          ++ "、"
-          ++ dtlc
-          ++ "、"
-          ++ pest
-          ++ " "
-          ++ "等插件），同时了解 Eclipse/SonarQube/VSCode 的插件开发。",
-      en $
-        "familiar with the IntelliJ Platform infrastructure (created"
-          ++ " "
-          ++ julia
-          ++ ", "
-          ++ dtlc
-          ++ ", "
-          ++ pest
-          ++ ", "
-          ++ "etc.), also have experience with Eclipse/SonarQube/VSCode plugin development."
-    ]
-  where
-    julia = pref ++ "10413} {Julia}"
-    dtlc = pref ++ "12176} {DTLC}"
-    pest = pref ++ "12046} {Pest}"
-    pref = "\\href{https://plugins.transsnet.com/plugin/"
-
-kotlinJava :: Resume
-kotlinJava =
-  paragraph
-    [ pure "\\item \\textbf{Kotlin/Java}:",
-      cn "\\textbf{4 年}经验，",
-      cn $ "\\textbf{4} 个项目被 " ++ akotlin ++ " 收录，",
-      cn "熟悉 JNI、Gradle、Swing，理解 Contract DSL 和 Kotlin coroutines，",
-      cn "有使用 Kotlin 编译器分析代码的经验。",
-      en "\\textbf{4 years} of experience,",
-      elab $ "\\textbf{4} projects collected in " ++ akotlin ++ ",",
-      en "familiar with JNI, Gradle, and Swing, understand Contract DSL and Kotlin coroutines,",
-      en "did some code analysis with Kotlin's compiler."
-    ]
-  where
-    akotlin = "\\href{https://kotlin.link/?q=ice} {Awesome Kotlin}"
-
-typeTheory :: Resume
-typeTheory =
-  paragraph
-    [ itemTeX "类型论" "Type Theory",
-      cn "掌握直觉类型论、逆归纳法、同伦类型论、立方类型论；",
-      en "understand Martin-L\\\"{o}f type theory, coinduction, Homotopy type theory and Cubical type theory,",
-      cn "熟悉 Idris, Agda (\\textbf{3 年}经验，开发组成员)，Arend （前开发组成员）和一些 F$\\star$/Coq。",
-      en "familiar with Idris, Agda (\\textbf{3 years} of experience, contributor),",
-      en "Arend (past member) and some F$\\star$/Coq."
-      -- , cn $ "\\subitem 读过代码的项目： " ++ pref ++ " 和 " ++ last ++ "。"
-      -- , elab $ "\\subitem Source code studied: " ++ pref ++ " and " ++ last ++ "."
-    ]
-  where
-    last = "Arend"
-    pref = "Agda, Idris, MiniAgda, Mini-TT, elaboration-zoo"
-
-mobileDev :: Resume
-mobileDev =
-  paragraph
-    [ itemTeX "移动开发" "Mobile Development",
-      cn "\\textbf{2 年}经验，",
-      en "\\textbf{2 years} of experience,",
-      pure "Android (Java, Kotlin (Anko)), Flutter",
-      cn "。"
-    ]
+    somehow = "Rust C Javascript"
+    familiar = "Python"
 
 skills :: Resume
 skills =
   section "技能" "Skills" . pure $
     itemize
       [ programmingLanguages,
-        compiler,
-        kotlinJava,
-        typeTheory,
-        noSimple $
-          paragraph
-            [ pure "\\item \\textbf{JetBrains MPS}:",
-              cn "理解\\textbf{面向语言编程}的概念和应用。",
-              en "understand concepts and applications of \\textbf{Language-Oriented Programming}."
-            ],
-        ideDev,
-        noSimple $ mobileDev,
         devTools
       ]
 
@@ -451,76 +366,6 @@ resume =
           noSimple $ arendLSP
         ],
       skills,
-      section
-        "其他"
-        "Miscellaneous"
-        [ let intellij = "https://plugins.transsnet.com/author/10a216dd-c558-4aaf-aa8a-723f431452fb"
-              osc = url "https://ice1000.org/opensource-contributions"
-              bintray = "https://bintray.com/ice1000"
-              crates = "https://crates.io/users/ice1000"
-              personal = "https://personal.psu.edu/yqz5714"
-              stackex = href "https://stackexchange.com/users/9532102"
-              -- https://raw.githubusercontent.com/ice1000/resume/master/resume.pdf
-              enSimple = url "https://tinyurl.com/y8xdlfug"
-              -- https://raw.githubusercontent.com/ice1000/resume/master/resume-elab.pdf
-              enElab = url "https://tinyurl.com/y2v59t36"
-              -- https://raw.githubusercontent.com/ice1000/resume/master/resume-cn.pdf
-              cnLink = url "https://tinyurl.com/ya4urea8"
-              codewars = href "https://www.codewars.com/users/ice1000" ++ "{CodeWars}"
-              cwLevel = "\\textbf{1 dan}"
-              cwPerc = "0.021\\%"
-              cwRank = "\\#59"
-              projects =
-                "\\textsf{agda, Arend, KaTeX, shields.io, grpc-rs, intellij-solidity, intellij-haskell, "
-                  ++ "intellij-rust, TeXiFy-IDEA, rust-analyzer}"
-           in itemize
-                [ cn "\\item 一些个人页面链接（请使用支持超链接的 PDF 阅读器查看此项）：",
-                  cn $ href bintray ++ "{Bintray 主页}（用于发布 JVM 库），",
-                  cn $ href crates ++ "{Crates.io 主页}（用于发布 Rust 库），",
-                  cn $ href intellij ++ " {IntelliJ 插件开发者主页}，",
-                  cn $ href personal ++ "{科研计划}",
-                  simple "\\item Some profile links (please use a PDF reader with hyperlink support):",
-                  simple $ href bintray ++ "{Bintray profile} (for publishing JVM libraries),",
-                  simple $ href crates ++ "{Crates.io profile} (for publishing Rust libraries),",
-                  simple $ href intellij ++ " {IntelliJ Plugin developer profile},",
-                  simple $ href personal ++ "{Research Statement}",
-                  elab $ "\\item Bintray profile: " ++ url bintray ++ ", for publishing useful JVM libraries",
-                  elab $ "\\item Crates.io profile: " ++ url crates ++ ", for publishing interesting Rust libraries",
-                  elab $ "\\item IntelliJ Plugin developer profile: " ++ url intellij,
-                  elab $ "\\item Research profile: " ++ url personal,
-                  en "\\item Languages: English - fluent (TOEFL 100), Chinese - native speaker",
-                  cn "\\item 语言: English - 熟练 (托福 100)，汉语 - 母语水平",
-                  cn $ "\\item 开源贡献: " ++ osc,
-                  cn $ "向 " ++ projects ++ " 等项目贡献过代码",
-                  en $ "\\item Opensource Contributions: " ++ osc,
-                  elab "\\\\ member of \\textsf{JuliaEditorSupport, agda, pest-parser, EmmyLua, arend-lang} and more,",
-                  en $ "contributed to " ++ projects ++ " and other projects",
-                  elab "(apart from organization ones)",
-                  pure "\\item StackOverflow: \\url{https://tinyurl.com/y5cmw3dz}",
-                  cn $ "5000+ 声誉，同时也在" ++ stackex ++ "{其他 StackExchange 子站}活跃",
-                  en $ "5000+ reputations, also active on " ++ stackex ++ "{other StackExchange sites}",
-                  cn $ "\\item 获取此简历的最新中文版本: " ++ cnLink,
-                  cn $ "\\item 获取此简历的最新英语版本: " ++ enElab,
-                  cn $ "\\item 获取此简历的最新单页版本（仅英语）: " ++ enSimple,
-                  en $ "\\item Latest one-page version of this resume: " ++ enSimple,
-                  en $ "\\item Latest complete version of this resume: " ++ enElab,
-                  elab $ "\\item Get the Chinese version of this resume: " ++ cnLink,
-                  cn $
-                    "\\item 在 " ++ codewars ++ " 上，以 Haskell、Agda 和 Idris 为主，达到"
-                      ++ cwLevel
-                      ++ "，全站排名"
-                      ++ cwRank
-                      ++ "（前 "
-                      ++ cwPerc
-                      ++ "）",
-                  en $ "\\item " ++ cwLevel ++ " on " ++ codewars ++ ",",
-                  en $ "ranked " ++ cwRank ++ " on the whole site (Top " ++ cwPerc ++ "),",
-                  elab "solving and making new problems primarily in Haskell, Agda and Idris",
-                  simple "primarily in Haskell, Agda and Idris"
-                  -- , cn "\\item 很喜欢交朋友"
-                  -- , elab "\\item Love making friends"
-                ]
-        ],
       -- end document
       pure "\\end{document}"
     ]
