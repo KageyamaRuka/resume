@@ -46,9 +46,9 @@ cienet =
         ],
       noSimple $
         itemize
-          [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发面向 WMG 云网关的自动化测试框架。",
-            en "\\item Responsible for CI project development on Jenkins. Co-worked on the automation test framework for WMG Cloud Gateway.",
-            cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同步部署数十台自动化测试环境。",
+          [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发自动化测试框架。",
+            en "\\item Responsible for CI project development on Jenkins. Co-worked on the automation test framework.",
+            cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同时部署数十台环境。",
             en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", supporting dozens of automation test environment parallel building",
             cn "\\item 合作编写了一个分布式测试框架，将全回归测试的 3000+ 条用例完成时间由 12 小时缩短至仅需 2 小时。",
             en "\\item Co-worked on the Distributed Test Framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to 2 hours"
@@ -120,7 +120,7 @@ insta360 =
       itemize
         [
           cn "\\item 负责测试框架的设计与开发, 以及测试组的自动化建设。",
-          en "\\item Responsible for test framework design and develop.",
+          en "\\item Responsible for test framework design and development, .",
           cn "\\item 编写了一个通用测试框架GAT, 涵盖了 UI/RPC/Stability 等场景的自动化测试需求。",
           en "\\item .",
           cn $ "\\item 在GAT的基础上, 编写了一个基于 " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " 的 UI 测试拓展模块, 以支持 iOS/Android 平台相机 App 的 UI 自动化测试, 以及 Windows 平台的桌面后期处理软件 Insta360 Studio 的 UI 自动化测试。",
@@ -145,8 +145,8 @@ michaels =
             en "\\textbf{Michaels Stores, Inc.}, Fulltime"
           ],
       paragraph
-        [ cn "\\role{依值类型系统实现}{类型小队队长}",
-          en "\\role{Implementation of Dependent Types}{Types team lead}"
+        [ cn "\\role{依值类型系统实现}{软件工程师, 自动化负责人}",
+          en "\\role{Implementation of Dependent Types}{Software Engineer and Automation Team Lead}"
         ],
       itemize
         [ cn $ "\\item 带领类型小队探索现代化的依值类型实现策略，包括但不限于基于模式的合一化、模式匹配的类型检查、递归函数停机性检查等。",
