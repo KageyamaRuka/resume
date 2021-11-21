@@ -75,7 +75,7 @@ pingan =
           en "\\item Responsible for PingAn Cloud Portal's backend api test and automation test toolkit development.",
           cn $ "\\item 编写了一个基于 " ++ paramiko ++ "/" ++ flask ++ "的指令转发服务，以支持云平台模版部署VM功能的测试验证。",
           elab $ "\\item Created a command route service based on " ++ paramiko ++ " and " ++ flask ++ " to test template VM building on PingAn Cloud.",
-          cn $ "\\item 编写了一个基于 " ++ pymysql ++ "/" ++ requests ++ " 异常数据提交工具, 能够定时触发查询业务数据的任务, 并将异常数据通过接口提交到项目管理平台并创建工单。",
+          cn $ "\\item 编写了一个基于 " ++ pymysql ++ "/" ++ requests ++ " 异常数据提交工具, 能够定时触发查询后端异常栈数据, 同时将异常数据通过接口提交到项目管理平台并创建工单。",
           elab $ "\\item Created a exception data commiter based on " ++ pymysql ++ "/" ++ requests ++ ", which could be trigged by time setting to query the exception data from business database and commit it to the Wizard project management platform and create defect ticket for it."
         ]
     ]
@@ -99,10 +99,8 @@ transsnet =
         ],
       itemize
         [ cn "\\item 负责 Palmcredit 项目相关测试工具开发。",
-          en
-            "\\item Responsible for test tools development for Palmcredit"
-            cn
-            $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
+          en "\\item Responsible for test tools development for Palmcredit",
+          cn $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
           en $ "\\item Created a tool for risk-control rules verification based on " ++ requests ++ "/" ++ boto3 ++ ", including credit report analyzation with credit data creation and injection.",
           cn $ "\\item 编写了一个基于 " ++ jmeter ++ " 的性能测试工具, 能够根据响应延时以及请求错误率自动调度测试执行, 同时自动伸缩并发线程数获取最大吞吐量。",
           en $ "\\item Created a performance test tool based on " ++ jmeter ++ " , which can trigger execution based on the response delay and fail rate, and auto scale threads on client to get the highest throughput."
