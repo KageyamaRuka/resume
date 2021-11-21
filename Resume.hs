@@ -23,10 +23,10 @@ education =
   section
     "教育经历"
     "Education"
-    [ datedSection (date "2008" "09" ~~ date "2012" "07") $
+    [ datedSection (date "2008" "09" ~~ date "2012" "06") $
         paragraph
           [ en "\\textbf{Wuhan University of Technology}, Hubei, CN",
-            cn "\\textbf{武汉理工大学}, 中国"
+            cn "\\textbf{武汉理工大学}, 湖北, 中国"
           ],
       en "Major: Electronic Information Engineering (Bachelor)",
       cn "专业：电子信息工程（本科）"
@@ -47,11 +47,11 @@ cienet =
       noSimple $
         itemize
           [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发自动化测试框架。",
-            en "\\item Responsible for CI project development on Jenkins. Co-worked on the automation test framework.",
+            en "\\item Responsible for CI project development on Jenkins, co-worked on the automation test framework.",
             cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同时部署数十台环境。",
-            en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", supporting dozens of automation test environment parallel building",
-            cn "\\item 合作编写了一个分布式测试框架，将全回归测试的 3000+ 条用例完成时间由 12 小时缩短至仅需 2 小时。",
-            en "\\item Co-worked on the Distributed Test Framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to 2 hours"
+            en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", which support dozens of test environments parallel building",
+            cn "\\item 合作编写了一个分布式测试框架，将全量回归测试的 3000+ 条用例执行时间由 12 小时缩短至不到 2 小时。",
+            en "\\item Co-worked on a distributed test framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to less than 2 hours"
           ]
     ]
   where
@@ -61,7 +61,7 @@ cienet =
 pingan :: Resume
 pingan =
   paragraph
-    [ datedSection (date "2018" "09" ~~ date "2019" "01") $
+    [ datedSection (date "2018" "08" ~~ date "2019" "01") $
         paragraph
           [ cn "\\textbf{平安科技（深圳）有限公司}, 全职",
             en "\\textbf{PingAn Technology}, Fulltime"
@@ -71,15 +71,19 @@ pingan =
           en "\\role{PingAn Cloud Portal}{Software Development Engineer in Test}"
         ],
       itemize
-        [ cn "\\item 负责平安云门户的后端接口测试代码开发以及自动化工具开发。",
-          en "\\item Responsible for PingAn Cloud Portal's backend api test code development and automation test toolkit development.",
-          cn $ "\\item 编写了一个基于 " ++ paramiko ++ "/" ++ flask ++ "的指令转发路由服务，以支持云平台模版部署VM功能的测试验证。",
-          elab $ "\\item Created a command route service based on " ++ paramiko ++ " and " ++ flask ++ " to test template VM building on PingAn Cloud."
+        [ cn "\\item 负责平安云门户的后端接口测试以及自动化工具开发。",
+          en "\\item Responsible for PingAn Cloud Portal's backend api test and automation test toolkit development.",
+          cn $ "\\item 编写了一个基于 " ++ paramiko ++ "/" ++ flask ++ "的指令转发服务，以支持云平台模版部署VM功能的测试验证。",
+          elab $ "\\item Created a command route service based on " ++ paramiko ++ " and " ++ flask ++ " to test template VM building on PingAn Cloud.",
+          cn $ "\\item 编写了一个基于 " ++ pymysql ++ "/" ++ requests ++ " 异常数据提交工具, 能够定时触发查询业务数据的任务, 并将异常数据通过接口提交到项目管理平台并创建工单。",
+          elab $ "\\item Created a exception data commiter based on " ++ pymysql ++ "/" ++ requests ++ ", which could be trigged by time setting to query the exception data from business database and commit it to the Wizard project management platform and create defect ticket for it."
         ]
     ]
   where
     flask = "\\href{https://flask.palletsprojects.com/} {flask}"
     paramiko = "\\href{https://www.paramiko.org/} {paramiko}"
+    pymysql = "\\href{https://pymysql.readthedocs.io/en/latest/} {PyMySQL}"
+    requests = "\\href{https://docs.python-requests.org} {requests}"
 
 transsnet :: Resume
 transsnet =
@@ -94,10 +98,14 @@ transsnet =
           en "\\role{Transsnet Financial}{Software Development Engineer in Test}"
         ],
       itemize
-        [ cn $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段自动化验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
-          en $ "\\item Created a tool for risk-control rules automation test and verification based on " ++ requests ++ " including credit report analyzation and credit data creation and injection.",
-          cn $ "\\item 编写了一个基于 " ++ jmeter ++ " 的性能测试工具, 能根据测试结果的吞吐量自动伸缩并发线程数, 同时根据响应延时以及请求错误率自动调度测试执行。",
-          en $ "\\item Created a performance test tool based on " ++ jmeter ++ " , which can auto scale threads on client by the throughput of test result, and trigger execution based on the response delay and fail rate"
+        [ cn "\\item 负责 Palmcredit 项目相关测试工具开发。",
+          en
+            "\\item Responsible for test tools development for Palmcredit"
+            cn
+            $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
+          en $ "\\item Created a tool for risk-control rules verification based on " ++ requests ++ "/" ++ boto3 ++ ", including credit report analyzation with credit data creation and injection.",
+          cn $ "\\item 编写了一个基于 " ++ jmeter ++ " 的性能测试工具, 能够根据响应延时以及请求错误率自动调度测试执行, 同时自动伸缩并发线程数获取最大吞吐量。",
+          en $ "\\item Created a performance test tool based on " ++ jmeter ++ " , which can trigger execution based on the response delay and fail rate, and auto scale threads on client to get the highest throughput."
         ]
     ]
   where
@@ -114,19 +122,18 @@ insta360 =
             en "\\textbf{insta360}, Fulltime"
           ],
       paragraph
-        [ cn "\\role{应用软件部测试组}{测试开发工程师与自动化负责人}",
-          en "\\role{Application Software Group, QA Team}{Software Development Engineer in Test and Automation Team Lead}"
+        [ cn "\\role{应用软件部 测试组}{测试开发工程师与自动化负责人}",
+          en "\\role{Application Software Group QA Team}{Software Development Engineer in Test and Automation Team Lead}"
         ],
       itemize
-        [
-          cn "\\item 负责测试框架的设计与开发, 以及测试组的自动化建设。",
-          en "\\item Responsible for test framework design and development, .",
-          cn "\\item 编写了一个通用测试框架GAT, 涵盖了 UI/RPC/Stability 等场景的自动化测试需求。",
-          en "\\item .",
-          cn $ "\\item 在GAT的基础上, 编写了一个基于 " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " 的 UI 测试拓展模块, 以支持 iOS/Android 平台相机 App 的 UI 自动化测试, 以及 Windows 平台的桌面后期处理软件 Insta360 Studio 的 UI 自动化测试。",
-          en "\\item .",
-          cn $ "\\item 在GAT的基础上, 编写了一个基于 " ++ protobuf ++ " 的 RPC 接口测试拓展模块, 以支持通过Wifi或USB远程控制相机。",
-          en "\\item ."
+        [ cn "\\item 负责测试框架的设计与开发, 以及测试组的自动化建设。",
+          en "\\item Responsible for test framework design and development, and automation workstream building for the QA team.",
+          cn "\\item 编写了一个通用自动化测试框架GAT, 支持 UI/RPC/Stability 等多种测试场景的需求。",
+          en "\\item Created a general automation testing framework(GAT), to support UI/RPC/Stability and many other test scenarios.",
+          cn $ "\\item 给 GAT 编写了一个基于 " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " 的 UI 测试拓展模块, 以支持 iOS/Android 平台的全景相机 App (Insta360) 以及 Windows 桌面端的全景媒体编辑器 (Insta360 Studio) 的 UI 自动化测试。",
+          elab $ "\\item Created a UI test extension based on " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " for GAT, to support UI automation for the panoramic camera app (Insta360) on iOS/Android and the panoramic media editor (Insta360 Studio) on Windows desktop.",
+          cn $ "\\item 给 GAT 编写了一个基于 " ++ protobuf ++ " 的 RPC 测试拓展模块, 以支持通过Wifi或USB远程控制insta360相机从而实现 RPC 接口验证。",
+          elab $ "\\item Created a RPC test extension based on " ++ protobuf ++ " for GAT, to support remote control the insta360 camera through Wifi or USB for the RPC interface verification"
         ]
     ]
   where
