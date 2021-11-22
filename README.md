@@ -1,9 +1,8 @@
-# ice1000's resume
+# Wayne's resume
 
-[![GitHub top language](https://img.shields.io/github/languages/top/ice1000/resume.svg)](https://github.com/ice1000/resume)
-[![GitHub forks](https://img.shields.io/github/forks/ice1000/resume.svg?style=social&label=Fork)](https://github.com/ice1000/resume)
+[![GitHub top language](https://img.shields.io/github/languages/top/KageyamaRuka/resume.svg)](https://github.com/KageyamaRuka/resume)
 
-This is my resume, based on [this template](https://github.com/billryan/resume).
+This is my resume, based on [this](https://github.com/ice1000/resume).
 There's a [Haskell script](Resume.hs) to generate the TeX source files.
 
 # Build
@@ -23,11 +22,3 @@ make
 cp *.pdf ..
 cd ..
 ```
-
-# Download/下载
-
-+ [English one-page version (pdf)](./resume.pdf)
-+ [English complete version (pdf)](./resume-elab.pdf)
-+ [中文版 (pdf)](./resume-cn.pdf)
-
-中文简历不提供单页版本。
