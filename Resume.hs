@@ -42,16 +42,16 @@ cienet =
           ],
       paragraph
         [ cn "\\role{持续集成组}{软件工程师}",
-          en "\\role{Continuous integration Team}{Software Engineer}"
+          en "\\role{Continuous Integration Team}{Software Engineer}"
         ],
       noSimple $
         itemize
           [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发自动化测试框架。",
-            en "\\item Responsible for CI project development on Jenkins, co-worked on the automation test framework development.",
+            en "\\item Responsible for CI project development on Jenkins, co-worked on the test framework development.",
             cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同时部署数十台环境。",
-            en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", which support dozens of test environments parallel building",
+            en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", which support dozens of test environments parallel building.",
             cn "\\item 合作编写了一个分布式测试框架，将全量回归测试的 3000+ 条用例执行时间由 12 小时缩短至不到 2 小时。",
-            en "\\item Co-worked on a distributed test framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to less than 2 hours"
+            en "\\item Co-worked on a distributed test framework development, shorten the execution time for a full regression test of 3000+ cases from 12 hours to less than 2 hours."
           ]
     ]
   where
@@ -72,7 +72,7 @@ pingan =
         ],
       itemize
         [ cn "\\item 负责平安云门户的后端接口测试以及自动化工具开发。",
-          en "\\item Responsible for PingAn Cloud Portal's backend api test and automation test toolkit development.",
+          en "\\item Responsible for PingAn Cloud Portal's backend api test and test tools development.",
           cn $ "\\item 编写了一个基于 " ++ paramiko ++ "/" ++ flask ++ "的指令转发服务，以支持云平台模版部署VM功能的测试验证。",
           elab $ "\\item Created a command route service based on " ++ paramiko ++ " and " ++ flask ++ " to test template VM building on PingAn Cloud.",
           cn $ "\\item 编写了一个基于 " ++ pymysql ++ "/" ++ requests ++ " 异常数据提交工具, 能够定时触发查询后端异常栈数据, 同时将异常数据通过接口提交到项目管理平台并创建工单。",
@@ -99,7 +99,7 @@ transsion =
         ],
       itemize
         [ cn "\\item 负责 Palmcredit 项目相关测试工具开发以及风控规则验证。",
-          en "\\item Responsible for test tools development and risk-control rules verification for Palmcredit",
+          en "\\item Responsible for test tools development and risk-control rules verification for Palmcredit.",
           cn $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
           en $ "\\item Created a tool for risk-control rules verification based on " ++ requests ++ "/" ++ boto3 ++ ", including credit report analyzation with credit data creation and injection.",
           cn $ "\\item 编写了一个基于 " ++ jmeter ++ " 的性能测试工具, 能够根据响应延时以及请求错误率自动调度测试执行, 同时自动伸缩并发线程数获取最大吞吐量。",
@@ -127,11 +127,11 @@ insta360 =
         [ cn "\\item 负责测试框架的设计与开发, 以及测试组的自动化建设。",
           en "\\item Responsible for test framework design and development, and automation workstream building for the QA team.",
           cn "\\item 编写了一个通用自动化测试框架GAT, 支持 UI/RPC/Stability 等多种测试场景的需求。",
-          en "\\item Created a general automation testing framework(GAT), to support UI/RPC/Stability and many other test scenarios.",
-          cn $ "\\item 给 GAT 编写了一个基于 " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " 的 UI 测试拓展模块, 以支持 iOS/Android 平台的全景相机 App (Insta360) 以及 Windows 桌面端的全景媒体编辑器 (Insta360 Studio) 的 UI 自动化测试。",
-          elab $ "\\item Created a UI test extension based on " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " for GAT, to support UI automation for the panoramic camera app (Insta360) on iOS/Android and the panoramic media editor (Insta360 Studio) on Windows desktop.",
+          en "\\item Created a General Automation Toolkit(GAT), to support UI/RPC/Stability and many other test scenarios.",
+          cn $ "\\item 给 GAT 编写了一个基于 " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " 的 UI 测试拓展模块, 以支持 iOS/Android 的 Insta360 App 以及 Windows 桌面端 Insta360 Studio 的 UI 自动化测试。",
+          elab $ "\\item Created a UI test extension based on " ++ appium ++ "/" ++ uiautomator2 ++ "/" ++ xcuitest ++ "/" ++ winappdriver ++ " for GAT, to support UI automation for Insta360 app on iOS/Android and Insta360 Studio on Windows desktop.",
           cn $ "\\item 给 GAT 编写了一个基于 " ++ protobuf ++ " 的 RPC 测试拓展模块, 以支持通过Wifi或USB远程控制insta360相机从而实现 RPC 接口验证。",
-          elab $ "\\item Created a RPC test extension based on " ++ protobuf ++ " for GAT, to support remote control the insta360 camera through Wifi or USB for the RPC interface verification"
+          elab $ "\\item Created a RPC test extension based on " ++ protobuf ++ " for GAT, to support remote control the insta360 camera through Wifi or USB for the RPC interface verification."
         ]
     ]
   where
@@ -157,11 +157,11 @@ michaels =
         [ cn "\\item 负责自动化团队管理，自动化测试流程规范设计落实，测试代码review与分支管理，持续集成接入，测试框架设计开发与维护。",
           en "\\item Responsible for automation team management, workstream desgin and implement, test code review and branch management, CI integration, test framework design, development and maintain.",
           cn $ "\\item 负责电商平台 " ++ b2b ++ " , " ++ mik ++ " 以及推荐系统、订单系统的后端接口测试与数据验证。",
-          en $ "\\item Responsible for backend API automation test and data verification for " ++ b2b ++ " , " ++ mik ++ ", recommendation service and order history service.",
+          en $ "\\item Responsible for backend API automation test and data verification for " ++ b2b ++ " , " ++ mik ++ ", Recommendation Service and Order History Service.",
           cn $ "\\item 给 GAT 编写了一个基于 " ++ requests ++ "/" ++ spanner ++ "/" ++ pymongo ++ "/" ++ pymysql ++ "/" ++ redis ++ " 的HTTP接口测试拓展模块，以支持后端接口的测试与数据验证。",
           elab $ "\\item Create a HTTP api test extension based on " ++ requests ++ "/" ++ spanner ++ "/" ++ pymongo ++ "/" ++ pymysql ++ "/" ++ redis ++ " for GAT, to support backend API test and data verification.",
           cn $ "\\item 给 GAT 新增了 " ++ precommit ++ "/" ++ black ++ "/" ++ flake8 ++ " 的支持，规范了测试代码的提交流程与格式化统一。",
-          elab $ "\\item Add " ++ precommit ++ "/" ++ black ++ "/" ++ flake8 ++ " support for GAT, to standardization code formatting and code committing",
+          elab $ "\\item Add " ++ precommit ++ "/" ++ black ++ "/" ++ flake8 ++ " support for GAT, to standardization code formatting and code committing.",
           cn $ "\\item 将 GAT 的线程并发依赖由 " ++ threading ++ " 切换到 " ++ gevent ++ " ，以降低线程切换开销提高并发性能。",
           elab $ "\\item Update dependency from " ++ threading ++ " to " ++ gevent ++ " for GAT, reducing the overhead for thread switching to improve concurrency performance."
         ]
