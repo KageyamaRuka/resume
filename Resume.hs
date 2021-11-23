@@ -47,7 +47,7 @@ cienet =
       noSimple $
         itemize
           [ cn "\\item 负责 Jenkins 平台 CI 工程开发，协助开发自动化测试框架。",
-            en "\\item Responsible for CI project development on Jenkins, co-worked on the automation test framework.",
+            en "\\item Responsible for CI project development on Jenkins, co-worked on the automation test framework development.",
             cn $ "\\item 编写了一个基于 " ++ fabric ++ "/" ++ paramiko ++ "的多线程远程部署工具，支持同时部署数十台环境。",
             en $ "\\item Created a multi-threading remote builder based on " ++ fabric ++ " and " ++ paramiko ++ ", which support dozens of test environments parallel building",
             cn "\\item 合作编写了一个分布式测试框架，将全量回归测试的 3000+ 条用例执行时间由 12 小时缩短至不到 2 小时。",
@@ -85,21 +85,21 @@ pingan =
     pymysql = "\\href{https://pymysql.readthedocs.io/en/latest/} {PyMySQL}"
     requests = "\\href{https://docs.python-requests.org} {requests}"
 
-transsnet :: Resume
-transsnet =
+transsion :: Resume
+transsion =
   paragraph
     [ datedSection (date "2019" "01" ~~ date "2019" "08") $
         paragraph
-          [ cn "\\textbf{传易互联（深圳）有限公司}, 全职",
-            en "\\textbf{Transsnet}, Fulltime"
+          [ cn "\\textbf{深圳传音控股股份有限公司}, 全职",
+            en "\\textbf{Transsion}, Fulltime"
           ],
       paragraph
         [ cn "\\role{传易金服}{测试开发工程师}",
           en "\\role{Transsnet Financial}{Software Development Engineer in Test}"
         ],
       itemize
-        [ cn "\\item 负责 Palmcredit 项目相关测试工具开发。",
-          en "\\item Responsible for test tools development for Palmcredit",
+        [ cn "\\item 负责 Palmcredit 项目相关测试工具开发以及风控规则验证。",
+          en "\\item Responsible for test tools development and risk-control rules verification for Palmcredit",
           cn $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
           en $ "\\item Created a tool for risk-control rules verification based on " ++ requests ++ "/" ++ boto3 ++ ", including credit report analyzation with credit data creation and injection.",
           cn $ "\\item 编写了一个基于 " ++ jmeter ++ " 的性能测试工具, 能够根据响应延时以及请求错误率自动调度测试执行, 同时自动伸缩并发线程数获取最大吞吐量。",
@@ -150,16 +150,35 @@ michaels =
             en "\\textbf{Michaels Stores, Inc.}, Fulltime"
           ],
       paragraph
-        [ cn "\\role{依值类型系统实现}{软件工程师, 自动化负责人}",
-          en "\\role{Implementation of Dependent Types}{Software Engineer and Automation Team Lead}"
+        [ cn "\\role{QA Group}{软件工程师, 自动化负责人}",
+          en "\\role{QA Group}{Software Engineer and Automation Team Lead}"
         ],
       itemize
-        [ cn $ "\\item 带领类型小队探索现代化的依值类型实现策略，包括但不限于基于模式的合一化、模式匹配的类型检查、递归函数停机性检查等。",
-          en $
-            "\\item Leading the types team to explore modern techniques in dependent type implementation, such as "
-              ++ "pattern unification of implicit variables, type checking of pattern matching, termination check of recursive definitions, etc."
+        [ cn "\\item 负责自动化团队管理，自动化测试流程规范设计落实，测试代码review与分支管理，持续集成接入，测试框架设计开发与维护。",
+          en "\\item Responsible for automation team management, workstream desgin and implement, test code review and branch management, CI integration, test framework design, development and maintain.",
+          cn $ "\\item 负责电商平台 " ++ b2b ++ " , " ++ mik ++ " 以及推荐系统、订单系统的后端接口测试与数据验证。",
+          en $ "\\item Responsible for backend API automation test and data verification for " ++ b2b ++ " , " ++ mik ++ ", recommendation service and order history service.",
+          cn $ "\\item 给 GAT 编写了一个基于 " ++ requests ++ "/" ++ spanner ++ "/" ++ pymongo ++ "/" ++ pymysql ++ "/" ++ redis ++ " 的HTTP接口测试拓展模块，以支持后端接口的测试与数据验证。",
+          elab $ "\\item Create a HTTP api test extension based on " ++ requests ++ "/" ++ spanner ++ "/" ++ pymongo ++ "/" ++ pymysql ++ "/" ++ redis ++ " for GAT, to support backend API test and data verification.",
+          cn $ "\\item 给 GAT 新增了 " ++ precommit ++ "/" ++ black ++ "/" ++ flake8 ++ " 的支持，规范了测试代码的提交流程与格式化统一。",
+          elab $ "\\item Add " ++ precommit ++ "/" ++ black ++ "/" ++ flake8 ++ " support for GAT, to standardization code formatting and code committing",
+          cn $ "\\item 将 GAT 的线程并发依赖由 " ++ threading ++ " 切换到 " ++ gevent ++ " ，以降低线程切换开销提高并发性能。",
+          elab $ "\\item Update dependency from " ++ threading ++ " to " ++ gevent ++ " for GAT, reducing the overhead for thread switching to improve concurrency performance."
         ]
     ]
+  where
+    spanner = "\\href{https://googleapis.dev/python/spanner/latest/index.html} {google-cloud-spanner}"
+    pymongo = "\\href{https://pymongo.readthedocs.io/en/stable/} {pymongo}"
+    pymysql = "\\href{https://pymysql.readthedocs.io/en/latest/} {PyMySQL}"
+    redis = "\\href{https://github.com/redis/redis-py} {redis}"
+    requests = "\\href{https://docs.python-requests.org} {requests}"
+    precommit = "\\href{https://pre-commit.com/} {pre-commit}"
+    flake8 = "\\href{https://flake8.pycqa.org/en/latest/} {flake8}"
+    black = "\\href{https://black.readthedocs.io/en/stable/} {black}"
+    gevent = "\\href{http://www.gevent.org/} {gevent}"
+    threading = "\\href{https://docs.python.org/3/library/threading.html} {threading}"
+    b2b = "\\href{https://enterprise.michaels.com/} {Michaels Enterprise/Education}"
+    mik = "\\href{https://www.michaels.com/} {Michaels Stores}"
 
 devKt :: Resume
 devKt =
@@ -295,11 +314,11 @@ devTools =
       cn $ "有使用 " ++ intercalate "、" tools ++ " 等团队协作工具的经验。",
       en "can adapt to mostly editors/OSs, usually use JetBrains IDEs and Vscode under",
       simple "MacOS/Arch Linux.",
-      elab "MacOS/Arch Linux, have experience with team collaboration tools like ",
+      elab "MacOS/Arch Linux, have experience with tools like ",
       elab $ intercalate ", " tools ++ "."
     ]
   where
-    tools = ["Jira", "BitBucket", "GitLab", "GitHub", "Slack"]
+    tools = ["Jira", "BitBucket", "GitLab", "GitHub", "Slack", "Jenkins"]
 
 programmingLanguages :: Resume
 programmingLanguages =
@@ -353,7 +372,7 @@ resume =
         "Work Experience"
         [ michaels,
           insta360,
-          transsnet,
+          transsion,
           pingan,
           cienet
         ],
