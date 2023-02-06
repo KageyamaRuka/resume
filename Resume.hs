@@ -3,6 +3,7 @@ module Resume (resume) where
 import Data.List
 import Distribution.Types.LocalBuildInfo (LocalBuildInfo (flagAssignment))
 import TeX
+import Text.XHtml (red)
 
 basicInfo :: Resume
 basicInfo =
@@ -10,7 +11,7 @@ basicInfo =
     [ pure "\\basicInfo{",
       pure $ "\\email{kageyama.ruka@gmail.com}" ++ period,
       -- , cn $ "\\phone{(+86) 186-7676-4936}" ++ period
-      -- , en $ "\\phone{(1) 608-501-1044}" ++ period
+      en $ "\\phone{(+65) 8432-3503}" ++ period,
       pure $ "\\github[KageyamaRuka]{https://github.com/KageyamaRuka}" ++ period,
       -- , pure $ "\\homepage[KageyamaRuka]{KageyamaRuka.github.io}" ++ period
       pure "\\linkedin[Wayne Deng]{https://www.linkedin.com/in/wayne-deng-82549499/}",
@@ -119,9 +120,9 @@ transsion =
         [ cn "\\item 负责 Palmcredit 项目相关测试工具开发以及风控规则验证。",
           en "\\item Responsible for test tools development and risk-control rules verification for Palmcredit.",
           cn $ "\\item 编写了一个基于 " ++ requests ++ "/" ++ boto3 ++ " 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。",
-          en $ "\\item Created a tool for risk-control rules verification based on " ++ requests ++ "/" ++ boto3 ++ ", including credit report analyzation with credit data creation and injection.",
+          elab $ "\\item Created a tool for risk-control rules verification based on " ++ requests ++ "/" ++ boto3 ++ ", including credit report analyzation with credit data creation and injection.",
           cn $ "\\item 编写了一个基于 " ++ jmeter ++ " 的性能测试工具, 能够根据响应延时以及请求错误率自动调度测试执行, 同时自动伸缩并发线程数获取最大吞吐量。",
-          en $ "\\item Created a performance test tool based on " ++ jmeter ++ " , which can trigger execution based on the response delay and fail rate, and scale threads automatically on client to get the highest throughput."
+          elab $ "\\item Created a performance test tool based on " ++ jmeter ++ " , which can trigger execution based on the response delay and fail rate, and scale threads automatically on client to get the highest throughput."
         ]
     ]
   where
@@ -166,7 +167,7 @@ insta360 =
 michaels :: Resume
 michaels =
   paragraph
-    [ datedSection (date "2021" "04" ~~ present) $
+    [ datedSection (date "2021" "04" ~~ date "2022" "04") $
         paragraph
           [ cn "\\textbf{Michaels Stores, Inc.}, 全职",
             en "\\textbf{Michaels Stores, Inc.}, Fulltime"
@@ -201,6 +202,38 @@ michaels =
     threading = "\\href{https://docs.python.org/3/library/threading.html} {threading}"
     b2b = "\\href{https://enterprise.michaels.com/} {Michaels Enterprise/Education}"
     mik = "\\href{https://www.michaels.com/} {Michaels Stores}"
+
+shopee :: Resume
+shopee =
+  paragraph
+    [ datedSection (date "2022" "06" ~~ present) $
+        paragraph
+          [ cn "\\textbf{Shopee Pte. Ltd.}, 全职",
+            en "\\textbf{Shopee Pte. Ltd.}, Fulltime"
+          ],
+      paragraph
+        [ cn "\\role{Traffic Infra}{测试专家}",
+          en "\\role{Traffic Infra}{Expert Engineer in QA Team}"
+        ],
+      itemize
+        [ cn $ "\\item 负责 " ++ web ++ " Traffic Infra团队Android SDK侧自动化框架设计与实现，开发与测试的代码review，测试用例设计与自动化实现。",
+          en $ "\\item Responsible for test framework design and implementation for Android SDK in Traffic Infra Team of " ++ web ++ ", code review for test and dev, test case design and automation.",
+          cn $ "\\item 负责 " ++ app ++ " 用户行为跟踪与埋点系统的版本迭代测试工作。",
+          elab $ "\\item Responsible for release regression test work of User Behavior Tracking and Data Point System in " ++ app ++ ".",
+          cn $ "\\item 设计与开发了基于" ++ mitmproxy ++ "/" ++ flask_restx ++ "/" ++ redis ++ " 的MITM(中间人)服务用于缓存UBT以及埋点数据以验证。",
+          en $ "\\item Created MITM(Man In The Middle) service based on " ++ mitmproxy ++ "/" ++ redis ++ "/" ++ flask_restx ++ " to cache the UBT and DP data for validation.",
+          cn $ "\\item 设计与开发了基于 " ++ junit5 ++ "/" ++ kotlin ++ "的sample app以支持UBT和DP埋点测试自动化。",
+          elab $ "\\item Created a sample app based on " ++ junit5 ++ "/" ++ kotlin ++ " for UBT and DP test automation."
+        ]
+    ]
+  where
+    mitmproxy = "\\href{https://github.com/mitmproxy/mitmproxy} {mitmproxy}"
+    flask_restx = "\\href{https://github.com/python-restx/flask-restx} {flask-restx}"
+    redis = "\\href{https://github.com/redis/redis-py} {redis}"
+    junit5 = "\\href{https://github.com/junit-team/junit5} {junit5}"
+    kotlin = "\\href{https://kotlinlang.org} {kotlin}"
+    web = "\\href{https://shopee.sg/} {Shopee SG}"
+    app = "\\href{https://play.google.com/store/apps/details?id=com.shopee.sg} {Shopp App}"
 
 gat :: Resume
 gat =
@@ -293,7 +326,7 @@ programmingLanguages =
       en $ "comfortable with " ++ somehow ++ "."
     ]
   where
-    somehow = "Rust C Javascript"
+    somehow = "Rust Kotlin"
     familiar = "Python"
 
 skills :: Resume
@@ -334,7 +367,8 @@ resume =
       section
         "工作经历"
         "Work Experience"
-        [ michaels,
+        [ shopee,
+          michaels,
           insta360,
           transsion,
           pingan,
@@ -346,7 +380,7 @@ resume =
         "Personal Projects"
         [ gat,
           noSimple todo,
-          paramikoClient
+          noSimple paramikoClient
         ],
       -- end document
       pure "\\end{document}"
