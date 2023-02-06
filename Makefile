@@ -18,7 +18,7 @@ else
 endif
 
 clean:
-	$(RM) latex/*.log latex/*.aux latex/*.bbl latex/*.blg latex/*.synctex.gz latex/*.out latex/*.toc latex/*.lof latex/*.idx latex/*.ilg latex/*.ind latex/*.pdf latex/*.cut latex/*.fdb_latexmk latex/*.fls
+	$(RM)  latex/resume*.tex latex/*.log latex/*.aux latex/*.bbl latex/*.blg latex/*.synctex.gz latex/*.out latex/*.toc latex/*.lof latex/*.idx latex/*.ilg latex/*.ind latex/*.pdf latex/*.cut latex/*.fdb_latexmk latex/*.fls
 
 clean-tex:
 	$(RM) latex/resume.tex latex/resume-cn.tex latex/resume-elab.tex
