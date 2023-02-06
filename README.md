@@ -18,6 +18,6 @@ make elab
 ```
 
 Download/下载
-+ [English one-page version (pdf)](https://github.com/KageyamaRuka/resume/releases/download/v0.2021/resume.pdf)
-+ [English complete version (pdf)](https://github.com/KageyamaRuka/resume/releases/download/v0.2021/resume-elab.pdf)
-+ [中文版 (pdf)](https://github.com/KageyamaRuka/resume/releases/download/v0.2021/resume-cn.pdf)
++ [English one-page version (pdf)](https://github.com/KageyamaRuka/resume/releases/download/v0.2023/resume.pdf)
++ [English complete version (pdf)](https://github.com/KageyamaRuka/resume/releases/download/v0.2023/resume-elab.pdf)
++ [中文版 (pdf)](https://github.com/KageyamaRuka/resume/releases/download/v0.2023/resume-cn.pdf)
