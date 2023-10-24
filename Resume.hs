@@ -219,11 +219,11 @@ shopee =
         [ cn $ "\\item 负责 " ++ web ++ " Traffic Infra团队Android SDK侧自动化框架设计与实现，开发与测试的代码review，测试用例设计与自动化实现。",
           en $ "\\item Responsible for test framework design and implementation for Android SDK in Traffic Infra Team of " ++ web ++ ", code review for test and dev, test case design and automation.",
           cn $ "\\item 负责 " ++ app ++ " 用户行为跟踪与埋点系统的版本迭代测试工作。",
-          elab $ "\\item Responsible for release regression test work of User Behavior Tracking and Data Point System in " ++ app ++ ".",
+          elab $ "\\item Responsible for release regression test work of User Behavior and Data Point Tracking in " ++ app ++ ".",
           cn $ "\\item 设计与开发了基于" ++ mitmproxy ++ "/" ++ flask_restx ++ "/" ++ redis ++ " 的MITM(中间人)服务用于缓存UBT以及埋点数据以验证。",
-          en $ "\\item Created MITM(Man In The Middle) service based on " ++ mitmproxy ++ "/" ++ redis ++ "/" ++ flask_restx ++ " to cache the UBT and DP data for validation.",
+          en $ "\\item Created MITM(Man In The Middle) service based on " ++ mitmproxy ++ "/" ++ redis ++ "/" ++ flask_restx ++ " to cache the user behavior data for validation.",
           cn $ "\\item 设计与开发了基于 " ++ junit5 ++ "/" ++ kotlin ++ "的sample app以支持UBT和DP埋点测试自动化。",
-          elab $ "\\item Created a sample app based on " ++ junit5 ++ "/" ++ kotlin ++ " for UBT and DP test automation."
+          elab $ "\\item Created a sample app based on " ++ junit5 ++ "/" ++ kotlin ++ " for tracking test automation."
         ]
     ]
   where
