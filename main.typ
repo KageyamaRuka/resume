@@ -398,7 +398,9 @@
   }
 
   let misc = {
-    let resume = iconlink("https://github.com/KageyamaRuka/resume", icon: github)
+    let onePage = iconlink("https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume.pdf", icon: github)
+    let elab = iconlink("https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume-elab.pdf", icon: github)
+    let cn = iconlink("https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume-cn.pdf", icon: github)
 
     translate(
       en: [- Languages: English - fluent, Chinese - native speaker],
@@ -406,10 +408,10 @@
     )
     translate(
       en: [
-        - Latest revision of this resume: one-page version #resume, complete version: #resume
-        #noSimple[- Get the Chinese version of this resume: #resume]
+        - Latest revision of this resume: one-page version #onePage, complete version: #elab
+        #noSimple[- Get the Chinese version of this resume: #cn]
       ],
-      zh: [- 获取此简历的最新更新：中文版本 #resume, 英语版本 #resume, 单页版本（仅英语）：#resume],
+      zh: [- 获取此简历的最新更新：中文版本 #cn, 英语版本 #elab, 单页版本（仅英语）：#onePage],
     )
   }
 
