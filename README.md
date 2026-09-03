@@ -8,8 +8,8 @@ Indeed, Typst is 114514 times better than $\LaTeX$.
 
 # Download/下载
 
-+ [English one-page version (PDF)](https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume.pdf)
-+ [English complete version (PDF)](https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume-elab.pdf)
-+ [中文版 (PDF)](https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume-cn.pdf)
++ [English one-page version (PDF)](https://github.com/KageyamaRuka/resume/releases/download/v0.2026/resume.pdf)
++ [English complete version (PDF)](https://github.com/KageyamaRuka/resume/releases/download/v0.2026/resume-elab.pdf)
++ [中文版 (PDF)](https://github.com/KageyamaRuka/resume/releases/download/v0.2026/resume-cn.pdf)
 
 中文简历不提供单页版本。
