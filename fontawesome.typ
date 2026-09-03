@@ -311,7 +311,7 @@
   ("dots", "\u{f4ad}"),
   ("medical", "\u{f7f5}"),
   ("slash", "\u{f4b3}"),
-  ("plural.", "\u{f086}"),
+  // ("plural.", "\u{f086}"),
   ("plural.dollar", "\u{f653}"),
 )
 #let compact-disc = symbol("\u{f51f}")

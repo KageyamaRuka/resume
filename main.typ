@@ -48,16 +48,21 @@
     )
   }
 
+  let allure = link("https://github.com/allure-framework/allure-python", "allure")
   let appium = link("https://appium.io/", "Appium")
+  let behave = link("https://github.com/behave/behave", "behave")
   let black = link("https://black.readthedocs.io/en/stable/", "black")
   let bootstrap = link("https://getbootstrap.com/", "Bootstrap")
   let boto3 = link("https://boto3.readthedocs.io", "boto3")
+  let clickhouse = link("https://clickhouse.com/", "clickhouse")
+  let docker = link("https://www.docker.com/", "docker")
   let fabric = link("https://www.fabfile.org/", "fabric")
   let flake8 = link("https://flake8.pycqa.org/en/latest/", "flake8")
   let flask = link("https://flask.palletsprojects.com/", "flask")
   let flask_restx = link("https://github.com/python-restx/flask-restx", "flask-restx")
   let gat = link("https://github.com/KageyamaRuka/#gat", "GAT")
   let gevent = link("http://www.gevent.org/", "gevent")
+  let grafana = link("https://grafana.com/", "grafana")
   let jmeter = link("https://jmeter.apache.org", "jmeter")
   let jquery = link("https://jquery.com/", "jQuery")
   let junit5 = link("https://github.com/junit-team/junit5", "junit5")
@@ -82,6 +87,7 @@
     "https://appium.io/docs/en/drivers/android-uiautomator2/",
     "UiAutomator2",
   )
+  let uv = link("https://docs.astral.sh/uv/", "uv")
   let winappdriver = link("https://github.com/Microsoft/WinAppDriver", "WinAppDriver")
   let xcuitest = link(
     "https://appium.io/docs/en/drivers/ios-xcuitest-real-devices/",
@@ -91,13 +97,22 @@
 
   let dyson = {
     let dyson-date = [#translate-date(2, 2024) -- #current]
+    let my_dyson = link("https://www.dyson.com.sg/mydyson-app", "MyDyson App")
+    let oc = link("https://www.dyson.com.sg/products/oral-care", "Oral Care")
+    let wearable = link("https://www.dyson.com.sg/ontrac-headphones-cnc-black-nickel", "Wearable")
+    let robot = link("https://www.dyson.com.sg/products/vacuum-cleaners/robot/spot-and-scrub-ai", "Robot")
     translate(
       en: cventry(
         tl: [*Dyson Operation Pte. Ltd.* Singapore],
         tr: dyson-date,
-        bl: [RDD Software, Senior Software Test Engineer],
+        bl: [RDD Software, Senior Software Test Engineer - Tech Lead],
       )[
-        - Responsible for test framework development and code review, test case design, execution and automation.
+        - Responsible for test framework development and code review, test case design, execution and automation for the #my_dyson.
+        - Experienced in testing and automation setup for #wearable/#oc/#robot.
+        #noSimple[
+          - Created a Chimera test framework based on #behave/#allure/#appium/#requests/#uv for the #my_dyson automation test.
+          - Setup and maintain test execution monitor service based on #grafana/#clickhouse/#docker to monitor performance metrics for API and test cases.
+        ]
       ],
       zh: cventry(
         tl: [*Dyson Operation Pte. Ltd.* 新加坡],
@@ -105,6 +120,9 @@
         bl: [软件研发部, 资深软件测试工程师],
       )[
         - 负责测试用例设计, 执行与自动化, 测试框架开发以及代码review
+        - 具备丰富的测试与自动化系统搭建经验在可穿戴设备、口腔护理及机器人项目。
+        - 设计与开发了基于 #behave/#allure/#appium/#requests 的 Chimera 测试框架用于 MyDyson App 的自动化测试。
+        - 部署搭建并维护基于 #grafana/#clickhouse/#docker 的测试监控服务用于监测自动化API和用例的性能数据
       ],
     )
   }
@@ -151,7 +169,7 @@
         tr: michaels-date,
         bl: [Automation Lead],
       )[
-        - Responsible for test framework design and development, test code review and branch management, continuous integration and automation team management.
+        - Build and manage the Automation team from 0 to 1, responsible for test framework design and development, test code review and branch management, continuous integration and automation team management.
         - Responsible for backend API automation test and data validation for #b2b, #mik, Recommendation and Order service.
         #noSimple[
           - Create a #gat HTTP API test extension based on #requests/#spanner/#pymongo/#pymysql/#redis to support backend API combination test and data validation.
@@ -164,7 +182,7 @@
         tr: michaels-date,
         bl: [自动化负责人],
       )[
-        - 负责自动化团队管理, 自动化测试流程规范设计落实, 测试代码review与分支管理, 持续集成接入, 测试框架设计开发与维护。
+        - 负责自动化团队从0到1的建设与管理, 自动化测试流程规范设计落实, 测试代码review与分支管理, 持续集成接入, 测试框架设计开发与维护。
         - 负责#b2b, #mik 电商平台、推荐系统、订单系统的后端接口测试与数据验证。
         - 给 #gat 编写了一个基于 #requests/#spanner/#pymongo/#pymysql/#redis 的 HTTP 接口测试拓展模块,
           以支持后端接口的测试与数据验证。
@@ -198,7 +216,7 @@
       )[
         - 负责测试框架的设计与开发, 以及测试组的自动化建设。
         - 编写了一个通用自动化测试框架GAT, 支持 UI/RPC/Stability 等多种测试场景的需求。
-        #noSimple[          
+        #noSimple[
           - 给 #gat 编写了一个基于 #appium/#uiautomator2/#xcuitest/#winappdriver 的 UI 测试拓展模块, 以支持 Insta360 iOS/Android App 以及 Insta360 Studio Windows 的 UI 自动化测试。
           - 给 #gat 编写了一个基于 #protobuf/#libusb1 的 RPC 测试拓展模块, 以支持通过Wifi或 USB 远程控制 insta360 相机从而实现 RPC 接口验证。
           - 给 #gat 编写了一个基于 #pyserial 的串口测试拓展模块, 以支持通过发送串口指令控制 insta360 相机的固件测试。
@@ -209,7 +227,10 @@
 
   let transsion = {
     let transsion-date = [#translate-date(1, 2019) -- #translate-date(8, 2019)]
-    let palmcredit = link("https://play.google.com/store/apps/details?id=com.transsnetfinancial.palmcredit&hl=en_SG&gl=NG", "Palmcredit")
+    let palmcredit = link(
+      "https://play.google.com/store/apps/details?id=com.transsnetfinancial.palmcredit&hl=en_SG&gl=NG",
+      "Palmcredit",
+    )
     translate(
       en: cventry(
         tl: [*Transsion Holdings*, Shenzhen, Guangdong, China],
@@ -227,10 +248,10 @@
         tr: transsion-date,
         bl: [传易金服, 测试开发工程师],
       )[#noSimple[
-          - 负责 Palmcredit 项目相关测试工具开发以及风控规则验证。
-          - 编写了一个基于 #requests/#boto3 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。
-          - 编写了一个基于 #jmeter 的性能测试工具, 能够根据响应延时以及请求错误率自动调度测试执行, 同时自动伸缩并发线程数获取最大吞吐量。
-        ]],
+        - 负责 Palmcredit 项目相关测试工具开发以及风控规则验证。
+        - 编写了一个基于 #requests/#boto3 的风控规则字段验证工具, 涵盖征信报告解析以及征信数据构造与注入。
+        - 编写了一个基于 #jmeter 的性能测试工具, 能够根据响应延时以及请求错误率自动调度测试执行, 同时自动伸缩并发线程数获取最大吞吐量。
+      ]],
     )
   }
 
@@ -253,10 +274,10 @@
         tr: pingan-date,
         bl: [平安云门户, 测试开发工程师],
       )[#noSimple[
-          - 负责平安云门户的后端接口测试以及自动化工具开发。
-          - 编写了一个基于 #paramiko/#flask 的指令转发服务, 以支持云平台模版部署VM功能的测试验证。
-          - 编写了一个基于 #pymysql/#requests 异常数据提交工具, 能够定时触发查询后端异常栈数据, 同时将异常数据通过接口提交到项目管理平台并创建工单。
-        ]],
+        - 负责平安云门户的后端接口测试以及自动化工具开发。
+        - 编写了一个基于 #paramiko/#flask 的指令转发服务, 以支持云平台模版部署VM功能的测试验证。
+        - 编写了一个基于 #pymysql/#requests 异常数据提交工具, 能够定时触发查询后端异常栈数据, 同时将异常数据通过接口提交到项目管理平台并创建工单。
+      ]],
     )
   }
 
@@ -285,21 +306,24 @@
 
   let transport = {
     let transport-date = [#translate-date(7, 2012) -- #translate-date(3, 2016)]
-    translate(en: cventry(
-      tl: [*Air Transport Group*, Xiaogan, Hubei, China],
-      tr: transport-date,
-      bl: [Quality Control Center, Operation Maintenance Engineer],
-    )[
-      #noSimple[
-        - Responsible for Linux/Windows server operation and maintenance..
-      ]
-    ], zh: cventry(
-      tl: [*孝感市航空运输团*, 孝感, 湖北, 中国],
-      tr: transport-date,
-      bl: [质控中心, 运维工程师],
-    )[#noSimple[
+    translate(
+      en: cventry(
+        tl: [*Air Transport Group*, Xiaogan, Hubei, China],
+        tr: transport-date,
+        bl: [Quality Control Center, Operation Maintenance Engineer],
+      )[
+        #noSimple[
+          - Responsible for Linux/Windows server operation and maintenance..
+        ]
+      ],
+      zh: cventry(
+        tl: [*孝感市航空运输团*, 孝感, 湖北, 中国],
+        tr: transport-date,
+        bl: [质控中心, 运维工程师],
+      )[#noSimple[
         - 负责 Linux/Windows 服务器运维工作。
-      ]])
+      ]],
+    )
   }
 
   let gat = {
@@ -308,7 +332,7 @@
       en: cventry(
         tl: [#gat_link $space$ *GAT*, Generic Automation Toolkit, a keyword driven test framework for integration test without domain specific language syntax.],
         tr: [],
-        bl: [(Rols: Creator)]
+        bl: [(Rols: Creator)],
       )[
         - Test case template based on YAML config file, keyword driven execution.
         - Parallel execution based on #gevent with thread level log collection.
@@ -322,7 +346,7 @@
       zh: cventry(
         tl: [*GAT*, 泛用型集成测试自动化框架],
         tr: gat_link,
-        bl: [（角色：创建者）]
+        bl: [（角色：创建者）],
       )[
         - 测试用例模版基于 YAML 配置文件, 由关键字驱动执行。
         - 基于 #gevent 的用户态线程并发执行模式及日志收集。
@@ -341,11 +365,11 @@
     translate(
       en: cventry(
         tl: [#paramiko_link $space$ *Paramiko SSH Client*, A SSH client based on #paramiko with SSH jump and log support.],
-        tr: []
+        tr: [],
       )[],
       zh: cventry(
         tl: [#paramiko_link $space$ *Paramiko SSH Client*, 一个基于 #paramiko 的 SSH 客户端, 支持 ssh 跳转以及日志功能。],
-        tr: []
+        tr: [],
       )[],
     )
   }
@@ -355,11 +379,11 @@
     translate(
       en: cventry(
         tl: [#todo_link $space$ *Todo App*, A simple Todo App, based on #jquery/#bootstrap/#pymongo/#flask, implemented an ORM module for #mongodb and a decorator for login status check.],
-        tr: []
+        tr: [],
       )[],
       zh: cventry(
         tl: [#todo_link $space$ *Todo App*, 一个简单的 Todo App, 基于 #jquery/#bootstrap/#pymongo/#flask, 实现了一个简单的 ORM 以及登陆态检查。],
-        tr: []
+        tr: [],
       )[],
     )
   }
@@ -399,7 +423,10 @@
 
   let misc = {
     let onePage = iconlink("https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume.pdf", icon: github)
-    let elab = iconlink("https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume-elab.pdf", icon: github)
+    let elab = iconlink(
+      "https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume-elab.pdf",
+      icon: github,
+    )
     let cn = iconlink("https://github.com/KageyamaRuka/resume/releases/download/v0.2024/resume-cn.pdf", icon: github)
 
     translate(
@@ -419,7 +446,10 @@
 
   translate(en: [= #smallcaps[Wayne Deng]], zh: [= 邓伟楠])
 
-  [#iconlink("mailto:kageyama.ruka@gmail.com", icon: envelope) $space$ #iconlink(" https://www.linkedin.com/in/wayne-deng-82549499/", icon: linkedin) $space$ #iconlink("https://github.com/KageyamaRuka", icon: github)]
+  [#iconlink("mailto:kageyama.ruka@gmail.com", icon: envelope) $space$ #iconlink(
+      " https://www.linkedin.com/in/wayne-deng-82549499/",
+      icon: linkedin,
+    ) $space$ #iconlink("https://github.com/KageyamaRuka", icon: github)]
 
   edu
 
